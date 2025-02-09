@@ -1,5 +1,3 @@
-
-https://github.com/user-attachments/assets/4ff73fc7-21dd-453d-ba4d-76bbb86e4421
 # 🚀 Autonomous Navigation with Nav2 using Cartographer SLAM
 This project implements autonomous navigation in a simulated or real-world environment using ROS 2 Nav2 and Cartographer SLAM. The system allows a robot to map an unknown environment, localize itself within the map, and navigate autonomously to predefined goals.
 
@@ -28,13 +26,13 @@ ros2 launch robot_bringup autobringup.launch.py use_sim_time:=True exploration:=
 
 ## 📹 Images 
 
-1. Robot Model in Rviz2
+#1. Robot Model in Rviz2
    ![model](https://github.com/user-attachments/assets/e3c2ec1a-0901-401f-aaed-df58b7f816e1)
 
-2. Robot and Goal Point
+#2. Robot and Goal Point
    ![map](https://github.com/user-attachments/assets/31df00bf-fb12-405a-be05-bcf7117147d8)
 
-3. Autonoumous Navigation
+#3. Autonoumous Navigation
    ![navi](https://github.com/user-attachments/assets/be0e5f33-ddd9-4266-aaac-53bf13b81a18)
 
 ## 📹 Demo Video
