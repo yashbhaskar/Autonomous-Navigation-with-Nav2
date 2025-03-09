@@ -12,7 +12,7 @@ from launch_ros.descriptions import ParameterValue
 
 def generate_launch_description():
   pkg_share = launch_ros.substitutions.FindPackageShare(package='robot_description').find('robot_description')
-  navigation_dir = os.path.join(get_package_share_directory('tortoisebot_navigation'), 'launch')
+  navigation_dir = os.path.join(get_package_share_directory('robot_navigation'), 'launch')
   rviz_launch_dir=os.path.join(get_package_share_directory('robot_description'), 'launch')
   #gazebo_launch_dir=os.path.join(get_package_share_directory('robot_description'), 'launch')
   cartographer_launch_dir=os.path.join(get_package_share_directory('robot_slam'), 'launch')
@@ -56,13 +56,6 @@ def generate_launch_description():
                           'exploration': exploration,
                           'use_sim_time': use_sim_time}.items())  
 
-
-  # differential_drive_node = Node(
-  #       package='tortoisebot_firmware',
-  #       condition=IfCondition(PythonExpression(['not ', use_sim_time])),
-  #       executable='differential.py',
-  #       name ='differential_drive_publisher',
-  #   )
 
 
   robot_state_publisher_node = launch_ros.actions.Node(
@@ -111,8 +104,6 @@ def generate_launch_description():
     state_publisher_launch_cmd,
     robot_state_publisher_node,
     joint_state_publisher_node,
-    # differential_drive_node,
-    # gazebo_launch_cmd,
     navigation_launch_cmd, 
     cartographer_launch_cmd
 
